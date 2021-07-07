@@ -9,35 +9,81 @@
     <link rel="icon" href="./img/phone3.jpg">
 
     <style>
-        model-viewer{
+
+        #back {
+            background: rgb(238,174,202);
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(0,156,222,1) 100%);
+        }
+        
+        #name{
+            color: aliceblue;
+        }
+        model-viewer {
             width: 300px;
             height: 500px;
             margin: auto;
         }
+
+        button {
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            border: none;
+            background-color: blue;
+            box-sizing: border-box;
+        }
+
+        button[slot="hotspot-hand"] {
+            --min-hotspot-opacity: 0;
+            background-color: red;
+        }
+
+        button[slot="hotspot-foot"]:not([data-visible]) {
+            background-color: transparent;
+            border: 3px solid blue;
+        }
+
+        #annotation {
+            background-color: #888888;
+            position: absolute;
+            transform: translate(10px, 10px);
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        /* This keeps child nodes hidden while the element loads */
+        :not(:defined)>* {
+            display: none;
+        }
     </style>
 </head>
 
-<body>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <model-viewer src="exportnew.glb" alt="A 3D model of an astronaut" environment-image="neutral" auto-rotate camera-controls></model-viewer>
-
-<!-- 
-    <div class="name">
-        <h1>Hi Coders <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif"
-                width="30px">, <b> I'm Manul</b></h1>
+<body id="back">
+    <div id="cover">
+        <div id="name">
+            <h1>Hi Coders <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif"
+                    width="30px">, <b> I'm Manul</b></h1>
+        </div>
+        <!-- <div class="details">
+            <h1>I'm Undergraduate at University Of Colombo School of Computing <br>
+                Following BSc. In Information Systems <br>
+            </h1>
+        </div> -->
+    
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <model-viewer src="exportnew.glb" alt="A 3D model of an astronaut" environment-image="neutral" auto-rotate
+            camera-controls>
+            <button slot="hotspot-visor" data-position="0 1.75 0.35" data-normal="0 0 1"></button>
+            <button slot="hotspot-hand" data-position="-0.54 0.93 0.1" data-normal="-0.73 0.05 0.69">
+              <div id="annotation">I'm Undergraduate at University Of Colombo School of Computing </div>
+            </button>
+            <button slot="hotspot-foot" data-position="0.16 0.1 0.17" data-normal="-0.07 0.97 0.23" data-visibility-attribute="visible"></button>
+            <!-- <div id="annotation">This annotation is fixed in screen-space</div> -->
+        </model-viewer>
     </div>
-    <div class="details">
-        <h1>I'm Undergraduate at University Of Colombo School of Computing <br>
-            Following BSc. In Information Systems <br>
-
-        </h1>
-        <p>
-        Read My Articles on - talkwithbatman.home.blog
-        Watch my videos on - https://www.youtube.com/channel/UCPC18Epsya_qbEF7qU1mOQQ
-        My dev articles - https://dev.to/manulmax
-        </p>
-    </div> -->
-
+    
+        
 </body>
 
 </html>
