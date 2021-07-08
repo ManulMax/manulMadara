@@ -1,0 +1,65 @@
+#bg{
+    height: 100%;
+    width: 100%;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, #267871 0%, #136a8a 100%);
+    clip-path: polygon(100% 0, 100% 100%, 88% 90%, 73% 90%, 61% 95%, 43% 94%, 33% 89%, 16% 92%, 0 100%, 0 0);
+    /* clip-path: circle(76.9% at 28% 20%); */
+    position: absolute;
+    z-index: -2;
+}
+#name{
+    color: aliceblue;
+    /* margin-top: 20px; */
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 20px;
+}
+#description{
+    margin-top: auto;
+}
+
+model-viewer {
+    width: 300px;
+    height: 500px;
+    margin-top: auto
+}
+
+button {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: blue;
+    box-sizing: border-box;
+}
+
+button[slot="hotspot-hand"] {
+    --min-hotspot-opacity: 0;
+    background-color: red;
+}
+
+button[slot="hotspot-foot"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid blue;
+}
+
+#annotation {
+    background-color: #888888;
+    position: absolute;
+    transform: translate(10px, 10px);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* This keeps child nodes hidden while the element loads */
+:not(:defined)>* {
+    display: none;
+}
+
+@media (max-width:770px){
+    #bg{
+        height: 200%;
+    }
+  }

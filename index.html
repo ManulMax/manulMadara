@@ -1,97 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manul</title>
-    <link rel="icon" href="./img/phone3.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Manul.dev</title>
+	<link rel="icon" href="./img/manul.jpg">
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+    <link href="css/style.css" rel="stylesheet">
 
-        #back {
-            background: rgb(238,174,202);
-            background: radial-gradient(circle, #267871 0%, #136a8a 100%);
-        }
-        
-        #name{
-            color: aliceblue;
-            margin-top: 20px;
-            margin-left: 30%;
-            margin-right: 30%;
-            margin-bottom: 20px;
-        }
-        model-viewer {
-            width: 300px;
-            height: 500px;
-            margin: auto;
-        }
+  </head>
+  <body>
+	<div id="bg">
+		<audio autoplay src="./background.mp3"> 
+			<!-- autoplay -->
+			<p>If you are reading this, it is because your browser does not support the audio element.     </p>
+		</audio>
+		<!-- <nav class="navbar fixed-bottom navbar-light bg-light">
+			<div class="container-fluid">
+			  <a class="navbar-brand" href="#">More About Me</a>
+			  <a class="navbar-brand" href="#">My Achievements</a>
+			  <a class="navbar-brand" href="#">Goals And Targets</a>
+			</div>
+		  </nav> -->
+		<!-- <hr width="80%"> -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row" id="top">
+						<div class="col-md-8" id="description">
+							<div class="page-header" id="header">
+								<h1>
+									Hi Coders ,<img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif"
+									width="30px"> <small>I'm Manul</small>
+								</h1>
+							</div>
+							<h2>
+								Undergraduate at UCSC
+							</h2>
+							<p> 
+								Following Information Systems Degree. <br> Hope to be graduate in 2022. <br> Will get a BSc.(IS). <br> I am a Tec 
+								Enthusiast, Programmer, Innovator, Blogger and Robotic Lover. I also interest about astronomy. I never work hard 
+								but I'm desirous of work smart. I worry about nothing but quality. I hope that every single code line
+								we write will help to change world. And make the world better place(&#128523; stole it from silicon valley)
+								<br>
+								<br>
+								<br>
+								<div class="container">
+									<div class="row g-2">
+									  <div class="col-sm">
+										<a class="btn btn-outline-light" href="#">More About Me</a>
+									</div>
+									  <div class="col-sm">
+										<a class="btn btn-outline-light" href="#">My Achievements</a>
+									  </div>
+									  <div class="col-sm">
+										<a class="btn btn-outline-light" href="#">Goals And Targets</a>
+									  </div>
+									</div>
+								  </div>
+							</p>
+							<!-- <p>
+								<a class="btn" href="#">View details »</a>
+							</p> -->
+						</div>
+						<div class="col-md-4" id="model">
+							<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+							<model-viewer src="exportnew.glb" alt="A 3D model of an astronaut" environment-image="neutral" auto-rotate
+							camera-controls>
+							<button slot="hotspot-visor" data-position="0 1.75 0.35" data-normal="0 0 1">
+							  <div id="annotation">Follow Me On Social Media</div>
+							</button>
+							<button slot="hotspot-hand" data-position="-0.54 0.93 0.1" data-normal="-0.73 0.05 0.69">
+							  <div id="annotation">Hey welcome to my site</div>
+							</button>
+							<button slot="hotspot-foot" data-position="0.16 0.1 0.17" data-normal="-0.07 0.97 0.23" data-visibility-attribute="visible"></button>
+							<!-- <div id="annotation">This annotation is fixed in screen-space</div> -->
+						</model-viewer>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        button {
-            display: block;
-            width: 20px;
-            height: 20px;
-            border-radius: 10px;
-            border: none;
-            background-color: blue;
-            box-sizing: border-box;
-        }
+	</div>
 
-        button[slot="hotspot-hand"] {
-            --min-hotspot-opacity: 0;
-            background-color: red;
-        }
+	<!-- <nav class="navbar fixed-bottom navbar-light bg-light">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#">More About Me   </a>
+		  <a class="navbar-brand" href="#">My Achievements</a>
+		  <a class="navbar-brand" href="#">Things I hope To Do   </a>
+		</div>
+	  </nav> -->
 
-        button[slot="hotspot-foot"]:not([data-visible]) {
-            background-color: transparent;
-            border: 3px solid blue;
-        }
-
-        #annotation {
-            background-color: #888888;
-            position: absolute;
-            transform: translate(10px, 10px);
-            border-radius: 10px;
-            padding: 10px;
-        }
-
-        /* This keeps child nodes hidden while the element loads */
-        :not(:defined)>* {
-            display: none;
-        }
-    </style>
-</head>
-
-<body id="back">
-    <audio autoplay src="./background.mp3">
-        <p>If you are reading this, it is because your browser does not support the audio element.     </p>
-    </audio>
-    
-    <div id="cover">
-        <div id="name">
-            <h1>Hi Coders <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif"
-                    width="30px">, <b> I'm Manul</b></h1>
-        </div>
-        <!-- <div class="details">
-            <h1>I'm Undergraduate at University Of Colombo School of Computing <br>
-                Following BSc. In Information Systems <br>
-            </h1>
-        </div> -->
-    
-        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-        <model-viewer src="exportnew.glb" alt="A 3D model of an astronaut" environment-image="neutral" auto-rotate
-            camera-controls>
-            <button slot="hotspot-visor" data-position="0 1.75 0.35" data-normal="0 0 1"></button>
-            <button slot="hotspot-hand" data-position="-0.54 0.93 0.1" data-normal="-0.73 0.05 0.69">
-              <div id="annotation">I'm Undergraduate at University Of Colombo School of Computing </div>
-            </button>
-            <button slot="hotspot-foot" data-position="0.16 0.1 0.17" data-normal="-0.07 0.97 0.23" data-visibility-attribute="visible"></button>
-            <!-- <div id="annotation">This annotation is fixed in screen-space</div> -->
-        </model-viewer>
-    </div>
-    
-        
-</body>
-
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script> -->
+  </body>
 </html>
