@@ -61,5 +61,13 @@ button[slot="hotspot-foot"]:not([data-visible]) {
 @media (max-width:770px){
     #bg{
         height: auto;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
   }
+
+@media (max-width:770px){
+    .h1,h1,.h2,h2{
+        margin-top: 5%;
+        margin-bottom: 2%;
+    }
+}
