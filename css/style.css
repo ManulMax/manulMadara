@@ -60,6 +60,6 @@ button[slot="hotspot-foot"]:not([data-visible]) {
 
 @media (max-width:770px){
     #bg{
-        height: 200%;
+        height: auto;
     }
   }
