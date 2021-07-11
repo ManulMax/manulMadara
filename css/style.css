@@ -8,6 +8,7 @@
     position: absolute;
     z-index: -2;
 }
+
 #name{
     color: aliceblue;
     /* margin-top: 20px; */
@@ -69,5 +70,9 @@ button[slot="hotspot-foot"]:not([data-visible]) {
     .h1,h1,.h2,h2{
         margin-top: 5%;
         margin-bottom: 2%;
+    }
+    #description{
+        text-align: center;
+        margin-top: 5%;
     }
 }
