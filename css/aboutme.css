@@ -2,7 +2,7 @@
     height: 120%;
     width: 100%;
     background: rgb(238,174,202);
-    background: radial-gradient(circle, #267871 0%, #136a8a 100%);
+    background: linear-gradient(to right top, #121c2c, #1b3049, #224567, #265c87, #2374a8);
     clip-path: polygon(26% 0, 100% 0, 100% 35%, 100% 71%, 69% 100%, 0 100%, 0 23%);
     /* clip-path: circle(76.9% at 28% 20%); */
     position: absolute;
