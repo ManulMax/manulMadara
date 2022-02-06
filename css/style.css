@@ -69,6 +69,17 @@ button[slot="hotspot-foot"]:not([data-visible]) {
     padding: 10px;
 }
 
+.bottom{
+    bottom: 0%;
+}
+
+.bottom img{
+    width: 10%;
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
+}
+
 /* This keeps child nodes hidden while the element loads */
 :not(:defined)>* {
     display: none;
