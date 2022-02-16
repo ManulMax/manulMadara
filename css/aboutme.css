@@ -1,16 +1,60 @@
 #bg{
-    height: 120%;
+    /* height: 120%;
     width: 100%;
     background: rgb(238,174,202);
     background: linear-gradient(to right top, #121c2c, #1b3049, #224567, #265c87, #2374a8);
-    clip-path: polygon(26% 0, 100% 0, 100% 35%, 100% 71%, 69% 100%, 0 100%, 0 23%);
+    clip-path: polygon(26% 0, 100% 0, 100% 35%, 100% 71%, 69% 100%, 0 100%, 0 23%); */
     /* clip-path: circle(76.9% at 28% 20%); */
+    height: 100%;
+    width: 100%;
+    background: rgb(238,174,202);
+    background: linear-gradient(-45deg, #e06c49, #81455c, #68a6bd, #0df5bf);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
     position: absolute;
     z-index: -2;
 }
+
+#icon-bar{
+    display: flex;
+    margin-top: 20%;
+    width: auto;
+    height: auto;
+}
+
+a:hover{
+    color: #ffc107;
+
+}
+
+i:hover::after{
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+i:hover{
+    transform: scale(2.2, 2.2);
+    -webkit-transform: scale(2.25, 2.25);
+    opacity: 0.7;
+    transition: opacity 0.4s ease-in;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 #title{
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 5%;
+    margin-bottom: 1%;
 }
 #list a:link{
     text-decoration: none;
@@ -18,9 +62,6 @@
 }
 a{
     color: inherit;
-}
-a:hover{
-    color: #ffc107;
 }
 .list-group-item{
     border: none;
@@ -30,4 +71,4 @@ a:hover{
         height: auto;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
-  }
+}  
