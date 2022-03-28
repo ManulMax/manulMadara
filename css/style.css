@@ -86,10 +86,10 @@ button[slot="hotspot-foot"]:not([data-visible]) {
 }
 
 @media (max-width:770px){
-    #bg{
+    /* #model{
+        width: auto;
         height: auto;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
+    } */
   }
 
 @media (max-width:770px){
